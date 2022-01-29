@@ -17,7 +17,7 @@ public class ChipSystem : MonoBehaviour
     {
         for (var i = 0; i < _player.Chips.Length; i++)
         {
-            Instantiate(chip,)
+            Instantiate(chip, transform);
         }
     }
 }
