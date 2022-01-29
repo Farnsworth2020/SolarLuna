@@ -13,12 +13,19 @@ public class Player : MonoBehaviour
     private float startHealth;
     public bool useGoldInsteadOfHP;
     private Transform attackPos;
+    private GameObject[] chips;
+
+    public float StartHealth => startHealth;
+
+    public GameObject[] Chips => chips;
+
     private void Awake()
     {
         playerPos = transform;
         playerRB=GetComponent<Rigidbody2D>();
         startHealth = Health;
         attackPos = transform.GetChild(0);
+        chips = new GameObject[5];
     }
 
     // Update is called once per frame
