@@ -6,6 +6,8 @@ using Random = System.Random;
 
 public class Effects : MonoBehaviour
 {
+    public string effectName;
+    public string chipName;
     private Player _player;
     public Sprite playerSprite;
     public Sprite[] monsterSprites;
@@ -14,16 +16,32 @@ public class Effects : MonoBehaviour
     private Random randomNumber;
     private string[] effectsName = {"GiveGold", "BecomeMonster", "CleanInventory", "RabbitBrought", "BackToTavern",
         "RandomizeEffects", "Sales", ""};
+
+    public string EffectName => effectName;
+
     private void Awake()
     {
         _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    public void EnableEffect(string name)
     {
-        Invoke(effectsName[randomNumber.Next(0,effectsName.Length-1)],0f);
+        Debug.Log("applied effect " + name);
+        Invoke(name,0f);
     }
 
+    public void DisableEffect()
+    {
+        enabled = false;
+    }
+
+    void HealPlayer()
+    {
+        Invoke("HealPlayer",1f);
+        if (_player.Health<_player.StartHealth) 
+        _player.Health += 1;
+    }
+    
     void GiveGold() // player recieve gold
     {
         Debug.Log("received sea of gold");
