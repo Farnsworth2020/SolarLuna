@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5529e85904705040bec60e4ff383ce4, type: 3}
-  m_Name: Engineer
+  m_Name: Genetisist
   m_EditorClassIdentifier: 
-  speakerName: Engineer
+  speakerName: "\u0413\u0435\u043D\u0435\u0442\u0438\u043A"
   speakerSprite: {fileID: 0}
