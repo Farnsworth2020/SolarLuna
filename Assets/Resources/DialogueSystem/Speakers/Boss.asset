@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Boss
   m_EditorClassIdentifier: 
   speakerName: "\u0411\u043E\u0441\u0441"
-  speakerSprite: {fileID: 0}
+  speakerSprite: {fileID: 21300000, guid: a1f0c3e3caf1e464399d9df7adadea6b, type: 3}
